@@ -11,22 +11,27 @@ int main(int argc, char** argv)
  {
   setlocale(LC_ALL,"rus");
   
-	int n;
-	char array1[10000], array2[10000];
+  int n;
+  char array1[10000], array2[10000];
   
-	cout << "Введите длинну массива: " << "\n";
-	cin >> n;
-	for (int i = 0; i < n; i++)
-	{
-  	cin >> array1[i];
-	}
-	for (int m=0; m<=n; m++)
-	{
-		for(int i=0; i<n-1; i++)
-			for(int j=1; j<n; j++)
-			{
-				if(array1[i]==array1[j]&&array[i]!=" ")
-					array2[m]=array1[i];
-			}
+  cout << "Введите длинну массива: " << "\n";
+  cin >> n;
+  for (int i = 0; i < n; i++)
+     {
+      cin >> array1[i];
+     }
+  for (int m=0; m<=n; m++)
+     {
+      for(int i=0; i<n-1; i++)
+	 {
+	  for(int j=1; j<n; j++)
+	     {
+	      if(array1[i]==array1[j]&&array[i]!=" ")
+		 {
+		  array2[m]=array1[i];
+		 }
+              }
+	  }
 		cout << array2[m] << "\n";
-	} 
+     } 
+}
