@@ -1,0 +1,22 @@
+//Определить длину строки, введенной пользователем.
+
+#include <iostream>
+#include <cstring>
+#include <cstdio>
+
+using namespace std;
+
+int main()
+{
+    setlocale(LC_ALL,"rus");
+    char text[1000];
+    
+    cout << "Введите строку: " <<endl;
+    
+    gets(text);
+
+    int num = strlen(text);
+    cout <<"Длина строки - "<<num;
+
+    return 0;
+}
