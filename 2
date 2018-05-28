@@ -1,0 +1,49 @@
+//В смещаемом массиве, последние элементы переносить в начало, без их потери.
+//Выводить полученный массив на каждоый иттерации.
+
+#include <iostream>
+
+using namespace std;
+
+int m[60], z[80];
+int a;
+
+int main()
+{
+ setlocale(LC_ALL,"rus");
+ 
+ for (int i = 0; i<60; i++)
+    {
+     a++;
+     m[i]=a;
+     z[i]=a;
+    };
+
+ cout << "Введите смещение (положительное число): "<<endl;
+ cin >> a;
+    
+ for (int n = 0; n<a; n++)
+    {
+     for (int i = 0; i<60; i++)
+        {
+         if ((i+1)<60)
+           {
+            z[i+1]=m[i];
+           }
+         else
+           {
+            z[0] = m[59];
+           };
+        };
+     for (int j = 0; j<60; j++)
+        {
+         m[j]=z[j];
+        };
+     for (int j = 0; j<60; j++)
+        {
+         cout <<z[j];
+        };
+     cout <<endl;
+    };
+ return 0;
+}
