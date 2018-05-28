@@ -1,0 +1,39 @@
+//Вычислить сумму модулей эллементов массива расположеных сразу после первого отрицательного элемента массива.
+
+
+#include <iostream>
+#include <cstdlib>
+#include <ctime>
+
+using namespace std;
+
+int main()
+{
+ setlocale(LC_ALL,"rus");
+ 
+ int a;
+ int mas[120];
+ 
+ for(int i=0; i<120; i++)
+    {
+     a=rand() % 1400;
+     int j=rand() % 10;
+     if(j<7)
+       {
+         mas[i]= a*(-1);
+       }
+     else
+       {
+         mas[i]=a;
+       }
+    }
+    
+ for(int sum=0; int i=0; i<120; i++)
+    {
+     sum+=abs(mas[i]);
+    }
+    
+ cout<<sum;
+ 
+ return 0;
+}
