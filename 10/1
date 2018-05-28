@@ -1,0 +1,25 @@
+//Необходимо посчитать кол-во единиц в двоичной записи числа n.
+
+#include <iostream>
+#include <stdlib.h>
+#include <string>
+
+using namespace std;
+ 
+int main()
+{
+ setlocale(LC_ALL,"rus")
+ int a, mod, sum;
+ 
+ cout << "Введите десятичное число: " << endl;
+ cin >> a;
+    
+ while (a)
+      {
+        mod = a % 2;
+        a /= 2;
+        sum +=mod;
+      }   
+ cout << sum;
+ system("pause"); 
+}
