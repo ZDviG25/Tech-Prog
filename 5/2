@@ -1,0 +1,44 @@
+//Найти все положительные элементы главной диагонали квадратной матрицы
+
+#include <iostream>
+#include <cstdlib>
+#include <ctime>
+
+using namespace std;
+
+int k;
+
+int main() 
+{ 	
+ setlocale(LC_ALL, "Russian");
+
+ cout<<"Введите k - "<<endl;
+ cin>>k;
+ int mas[k][k];
+ 
+	for(int i=0;i<k;i++)
+   	 {  
+	    for(int j=0;j<k;j++)
+         {
+          int f =rand() % 10;
+          if(f<5)
+            {
+             mas[i][j]=(rand() % 1000)*-1;
+            }
+             else
+            {
+             mas[i][j]=rand() % 1000;
+            }
+         }
+     }
+     
+ for(int i=0;i<k;i++)
+	  {
+     if(mas[i][i]>0)
+       {
+        cout<<";"<<mas[i][i];
+		   }
+    }
+    
+	return 0;
+}
