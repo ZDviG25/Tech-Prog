@@ -1,0 +1,50 @@
+//Дана произвольная числовая матрица. Вывести на экран индекс минимального элемента этой матрицы.
+
+#include <iostream>
+#include <cstdlib>
+#include <ctime>
+
+using namespace std;
+
+int k;
+int mas[k][k];
+int g=1000;
+
+int main() 
+{ 	
+  setlocale(LC_ALL, "rus");
+  
+	cout<<"Введите k"<<endl;
+	cin>>k;
+  
+	for(int i=0;i<k;i++)
+	   {  
+	    for(int j=0;j<k;j++)
+         {
+          int f =rand() % 10;
+          if(f<7)
+            {
+             mas[i][j]=(rand() % 1400)*-1;
+            }
+          else
+            {
+             mas[i][j]=rand() % 1200;
+            }
+  	 	   }
+     }
+  for(int i=0;i<k;i++)
+     {
+      for(int j=0;j<k;j++)
+         {
+          if(mas[i][j]<g)
+            {
+             g=mas[i][j];
+            }
+         }
+
+     }
+     
+  cout<<g;
+  
+  return 0;
+}
