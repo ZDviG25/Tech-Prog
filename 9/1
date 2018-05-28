@@ -1,0 +1,31 @@
+//В файле записаны имена студентов и их возраст. Считать из файла и вывести на экран имена всех студентов, чей возраст превышает 20 лет.
+
+#include <iostream>
+#include <fstream>
+#include <windows.h>
+
+using namespace std;
+
+string name;
+int year;
+       
+int main()
+{   
+ SetConsoleCP(1251);
+ SetConsoleOutputCP(1251);
+ ifstream file("in.txt");
+ 
+ while (file)
+      {
+        file >> name;
+        file >> year;
+        if (year>20)
+        {
+         cout << name << endl;
+        };
+      };
+      
+ file.close();
+ 
+ return 0;
+}
